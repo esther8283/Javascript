@@ -1,2 +1,2 @@
-# Javascript00
+# Javascript
 자바스크립트
