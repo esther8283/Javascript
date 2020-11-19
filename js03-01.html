@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 3-1</title>
+    <script>
+        var fruits = "사과";
+
+        switch (fruits) { // switch (조건식)
+            case "바나나": // case 값1 :
+            price = 200; //실행 코드
+            break; // 실행코드 종료(=멈춤)
+
+            case "사과":  // case 값2 :
+            price = 300;
+            break;
+
+            case "체리":  // case 값3 :
+            price = 400;
+            break;
+
+            default: // 모든 case에 원하는게 없을 경우 실행 (=> else if문의 else와 동일), 생략가능(모든 case를 다 입력시)
+            console.log("팔지 않습니다.");
+            price = 0;
+        }
+        console.log(price);
+        // document.write(price);
+
+        console.log("------------------");
+
+        fruits = "사과"
+        price = 0;
+
+        if (fruits == "바나나") {
+            price = 200;
+        }
+        else if (fruits == "사과") {
+            price = 300;
+        }
+        else if (fruits == "체리") {
+            price = 400;
+        }
+        else {
+            price = 0;
+            console.log("팔지 않습니다.");
+        }
+        console.log(price);
+
+        console.log("------------------");
+
+        // new Date().getDay; 오늘 날짜의 요일을 숫자 0 ~ 6 으로 표현해 줌
+        var day = new Date().getDay();
+        var toDay = "";
+
+        switch (day) {
+            case 1:
+            toDay = "월요일";   
+            break; 
+        
+            case 2:
+            toDay = "화요일";
+            break; // 실행시 break를 만나면 실행코드를 중단하고 switch문에서 탈출
+
+            case 3:
+            toDay = "수요일";
+            break;
+
+            case 4:
+            toDay = "목요일";
+            break;
+            
+            case 5:
+            toDay = "금요일";
+            break;
+
+            default:
+            toDay = "주말";
+            break;
+        }
+        console.log("오늘은 " + toDay + "입니다.")
+
+        console.log("---------문제1----------");
+
+        // 문제 1) 위의 요일 입력하는 부분을 사용가 날짜를 입력하면 해당하는 요일이 출력되는 프로그램을 작성하세요.
+        // else if 문으로 작성하세요
+        // 사용자 입력 방식 : "2020-11-17"
+       
+        var today = prompt("날짜를 입력하세요");
+        var day = new Date(today).getDay(); 
+        // var inputDay = prompt("날짜를 입력하세요, 2020-12-15");
+        // var day =  new Date(inputDay).getDay(); -> new Date : 날짜관련객체, getDay : 0 ~ 6 요일 출력
+        // var toDay = ""; -> 한글로 요일정보를 입력
+     
+        if (day == 1) {
+            console.log("월요일 입니다");
+        }
+        else if (day == 2) {
+            console.log("화요일 입니다");
+        }
+        else if (day == 3) {
+            console.log("수요일 입니다");
+        }
+        else if (day == 4) {
+            console.log("목요일 입니다");
+        }
+        else if (day == 5) {
+            console.log("금요일 입니다");
+        }
+        else {
+            console.log("주말 입니다");
+        } 
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
